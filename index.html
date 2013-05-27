@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>TZInfo - Ruby Timezone Library</title>
@@ -8,14 +8,39 @@
   <body>
     <h1>TZInfo - Ruby Timezone Library</h1>
     <p>
-      TZInfo is a Ruby library that uses the standard <a href="http://www.iana.org/time-zones">Time Zone Database</a> (often called
-      tz or zoneinfo) to provide daylight savings aware transformations between times in different time zones.
-      The tz database is compiled into Ruby modules which are packaged in the release.
-      No external zoneinfo files are required at runtime.
+      TZInfo is a Ruby library that provides daylight savings aware
+      transformations between times in different timezones.
     </p>
+    <p>
+      TZInfo requires a source of timezone data. There are two built-in options:
+    </p>
+    <ol>
+      <li>
+        The separate TZInfo::Data library (the tzinfo-data gem). TZInfo::Data 
+        contains a set of Ruby modules that are generated from the
+        <a href="http://www.iana.org/time-zones">IANA Time Zone Database</a>.
+      </li>
+      <li>
+        A zoneinfo directory. Most Unix-like systems include a zoneinfo
+        directory containing timezone definitions. These are also generated
+        from the IANA Time Zone Database.
+      </li>
+    </ol>
+    <p>
+      Custom data sources can also be created and used with TZInfo.
+    </p>
+    <h2>RubyGems</h2>
+    <p>
+      gem files are available on RubyGems.org:
+    </p>
+    <ul>
+      <li><a href="https://rubygems.org/gems/tzinfo">tzinfo</a></li>
+      <li><a href="https://rubygems.org/gems/tzinfo-data">tzinfo-data</a></li>
+    </ul>
     <h2>Installation and Usage</h2>
     <p>
-      Instructions for installing and using TZInfo can be found in the project <a href="doc/files/README.html">readme</a> file.
+      Instructions for installing and using TZInfo can be found in the project 
+      <a href="doc/files/README.html">readme</a> file.
     </p>
     <h2>API Documentation</h2>
     <p>
@@ -38,22 +63,17 @@
       requests. You can download releases from the <a href="http://rubyforge.org/frs/?group_id=894">File list</a>.
       The source code is available through <a href="http://rubyforge.org/scm/?group_id=894">SVN</a>.
     </p>
-    <h2>Ruby on Rails</h2>
+    <h2>Ruby on Rails / Active Support</h2>
     <p>
-      Ruby on Rails (version 2.1 and later) uses TZInfo for timezone support. Rails can automatically store times in UTC
-      and convert to the user's timezone for display.
-    </p>
-    <h2>Alternatives</h2>
-    <h3>Ruby/TZFile</h3>
-    <p>
-      <a href="http://www.a-k-r.org/ruby-tzfile/">Ruby/TZFile</a> provides a similar interface to TZInfo, but
-      requires you to have zoneinfo files available locally.
+      Ruby on Rails (Active Support) uses TZInfo for timezone support. Rails can
+      automatically store times in the database using UTC and convert to and 
+      from the user's timezone for display.
     </p>
     <p>
       <small>
         <a href="http://philross.co.uk">Phil Ross</a>
         <br />
-        6th November 2011
+        27th May 2013
       </small>
     </p>
   </body>
