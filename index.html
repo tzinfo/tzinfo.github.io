@@ -7,10 +7,15 @@
   </head>
   <body>
     <h1>TZInfo - Ruby Timezone Library</h1>
+    <p class="badges">
+      <a href="https://travis-ci.org/tzinfo/tzinfo"><img src="https://travis-ci.org/tzinfo/tzinfo.svg?branch=master" alt="Build Status"></a>
+      <a href="http://badge.fury.io/rb/tzinfo"><img src="https://badge.fury.io/rb/tzinfo.svg" alt="Gem Version"></a>
+    </p>
     <p>
       TZInfo is a Ruby library that provides daylight savings aware
       transformations between times in different timezones.
     </p>
+    <h2>Data Sources</h2>
     <p>
       TZInfo requires a source of timezone data. There are two built-in options:
     </p>
@@ -27,9 +32,8 @@
       </li>
     </ol>
     <p>
-      By default, TZInfo::Data will be used. If TZInfo::Data is not available 
-      (i.e. if require 'tzinfo/data' fails), then TZInfo will search for a 
-      zoneinfo directory instead.
+      By default, TZInfo::Data will be used. If TZInfo::Data is not available, 
+      then TZInfo will search for a zoneinfo directory instead.
     </p>
     <p>
       Custom data sources can also be created and used with TZInfo.
@@ -51,6 +55,14 @@
     <p>
       API Documentation is <a href="http://rubydoc.info/gems/tzinfo/frames">available on RubyDoc.info</a>.
     </p>
+    <h2>License</h2>
+    <p>
+      TZInfo and TZInfo::Data are released under the MIT license, see
+      the project files 
+      (<a href="http://rubydoc.info/gems/tzinfo/file/LICENSE">TZInfo</a>,
+      <a href="http://rubydoc.info/gems/tzinfo-data/file/LICENSE">TZInfo::Data</a>)
+      for details.
+    </p>
     <h2>Mailing Lists</h2>
     <p>
       There are two TZInfo <a href="http://rubyforge.org/mail/?group_id=894">mailing lists</a>:
@@ -68,9 +80,6 @@
     <h2>Issue Tracker</h2>
     <p>
       Please report any bugs, issues and feature requests through the <a href="https://github.com/tzinfo/tzinfo/issues">GitHub issue tracker</a>.      
-    </p>
-    <p>
-      You can find bugs reported prior to August 2013 on the <a href="http://rubyforge.org/tracker/?group_id=894">RubyForge Tracker</a>.
     </p>
     <h2>Releases</h2>
     <p>
@@ -90,7 +99,7 @@
       <small>
         <a href="http://philross.co.uk">Phil Ross</a>
         <br />
-        27 September 2013
+        25 May 2014
       </small>
     </p>
   </body>

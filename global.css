@@ -34,3 +34,8 @@ a:hover
 {
   color: #ff0000;
 }
+
+p.badges img
+{
+  height: 18px;
+}
