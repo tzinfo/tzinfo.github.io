@@ -1,28 +1,19 @@
 body
 {
   font-family: Arial, sans-serif;
-  font-size: 0.9em;
+  font-size: 14px;
 }
 
-input
+h1
 {
-  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-textarea
+h2
 {
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-}
-
-select
-{
-  font-family: Arial, sans-serif;
-}
-
-th
-{
-  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 a img
@@ -37,5 +28,5 @@ a:hover
 
 p.badges img
 {
-  height: 18px;
+  height: 20px;
 }
