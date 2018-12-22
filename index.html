@@ -2,39 +2,40 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TZInfo - Ruby Timezone Library</title>
+    <title>TZInfo - Ruby Time Zone Library</title>
     <link rel="stylesheet" title="main" href="global.css" type="text/css" />
   </head>
   <body>
-    <h1>TZInfo - Ruby Timezone Library</h1>
+    <h1>TZInfo - Ruby Time Zone Library</h1>
     <p class="badges">
       <a href="https://badge.fury.io/rb/tzinfo"><img src="https://badge.fury.io/rb/tzinfo.svg" alt="Gem Version"></a>
       <a href="https://travis-ci.org/tzinfo/tzinfo"><img src="https://travis-ci.org/tzinfo/tzinfo.svg?branch=master" alt="Travis CI Build Status"></a>
       <a href="https://ci.appveyor.com/project/philr/tzinfo/branch/master"><img src="https://ci.appveyor.com/api/projects/status/btinuu4g8sdachj3/branch/master?svg=true" alt="AppVeyor Build Status"></a>
     </p>
     <p>
-      TZInfo is a Ruby library that provides daylight savings aware
-      transformations between times in different timezones.
+      TZInfo is a Ruby library that provides access to time zone data and allows
+      times to be converted using time zone rules.
     </p>
     <h2>Data Sources</h2>
     <p>
-      TZInfo requires a source of timezone data. There are two built-in options:
+      TZInfo requires a source of timezone data. There are two options:
     </p>
     <ol>
       <li>
-        The separate TZInfo::Data library (the tzinfo-data gem). TZInfo::Data
-        contains a set of Ruby modules that are generated from the
-        <a href="https://www.iana.org/time-zones">IANA Time Zone Database</a>.
+        A zoneinfo directory containing timezone definition files. These files
+        are generated from the <a href="https://www.iana.org/time-zones">IANA
+        Time Zone Database</a> using the <code>zic</code> utility. Most
+        Unix-like systems include a zoneinfo directory.
       </li>
       <li>
-        A zoneinfo directory. Most Unix-like systems include a zoneinfo
-        directory containing timezone definitions. These are also generated
-        from the IANA Time Zone Database.
+        The TZInfo::Data library (the tzinfo-data gem). TZInfo::Data contains a
+        set of Ruby modules that are also generated from the IANA Time Zone
+        Database.
       </li>
     </ol>
     <p>
-      By default, TZInfo::Data will be used. If TZInfo::Data is not available,
-      then TZInfo will search for a zoneinfo directory instead.
+      By default, TZInfo will attempt to use TZInfo::Data. If TZInfo::Data is
+      not available, then TZInfo will search for a zoneinfo directory instead.
     </p>
     <p>
       Custom data sources can also be created and used with TZInfo.
@@ -50,29 +51,37 @@
     <h2>Installation and Usage</h2>
     <p>
       Instructions for installing and using TZInfo can be found in the project
-      <a href="http://rubydoc.info/gems/tzinfo/file/README.md">readme</a> file.
+      <a href="https://www.rubydoc.info/gems/tzinfo/file/README.md">readme</a>
+      file.
     </p>
-    <h2>API Documentation</h2>
+    <h2>Documentation</h2>
     <p>
-      API Documentation is <a href="http://rubydoc.info/gems/tzinfo/">available on RubyDoc.info</a>.
+      API Documentation for TZInfo is available on <a
+      href="https://www.rubydoc.info/gems/tzinfo/">RubyDoc.info</a>.
     </p>
     <h2>License</h2>
     <p>
-      TZInfo and TZInfo::Data are released under the MIT license, see
-      the project files
-      (<a href="http://rubydoc.info/gems/tzinfo/file/LICENSE">TZInfo</a>,
-      <a href="http://rubydoc.info/gems/tzinfo-data/file/LICENSE">TZInfo::Data</a>)
+      TZInfo and TZInfo::Data are released under the MIT license. Please refer
+      to the license files
+      (<a href="https://www.rubydoc.info/gems/tzinfo/file/LICENSE">TZInfo</a>,
+      <a href="https://www.rubydoc.info/gems/tzinfo-data/file/LICENSE">TZInfo::Data</a>)
       for details.
     </p>
     <h2>Source Code</h2>
-    <p>Source code repositories for TZInfo and TZInfo::Data are available on GitHub:</p>
+    <p>Source code for TZInfo and TZInfo::Data is available on GitHub:</p>
     <ul>
       <li><a href="https://github.com/tzinfo/tzinfo">TZInfo</a></li>
       <li><a href="https://github.com/tzinfo/tzinfo-data">TZInfo::Data</a></li>
     </ul>
     <h2>Issue Tracker</h2>
     <p>
-      Please report any bugs, issues and feature requests through the <a href="https://github.com/tzinfo/tzinfo/issues">GitHub issue tracker</a>.
+      Please post any bugs, issues, feature requests or questions about TZInfo
+      to the <a href="https://github.com/tzinfo/tzinfo/issues">GitHub issue
+      tracker</a>.
+
+      Issues with the underlying time zone data should be raised on the <a
+      href="https://mm.icann.org/mailman/listinfo/tz">Time Zone Database
+      Discussion mailing list</a>.
     </p>
     <h2>Releases</h2>
     <p>
@@ -82,17 +91,11 @@
       <li><a href="https://github.com/tzinfo/tzinfo/releases">tzinfo</a></li>
       <li><a href="https://github.com/tzinfo/tzinfo-data/releases">tzinfo-data</a></li>
     </ul>
-    <h2>Ruby on Rails / Active Support</h2>
-    <p>
-      Ruby on Rails (Active Support) uses TZInfo for timezone support. Rails can
-      automatically store times in the database using UTC and convert to and
-      from the user's timezone for display.
-    </p>
     <p>
       <small>
         <a href="http://philross.co.uk">Phil Ross</a>
         <br />
-        3 December 2017
+        22 December 2018
       </small>
     </p>
   </body>
